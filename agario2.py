@@ -78,12 +78,12 @@ while True:
             if (k.isvisible() and l.isvisible() and k != l and distance(k.position(), l.position()) <= facteurDeTaille * max(k.shapesize()[0], l.shapesize()[0])):
                 #Si les conditions sont remplies, il y a phagocytose
                 if (k.shapesize()[0] >= l.shapesize()[0]):
-                    k.speed(k.speed() - 2)
+                    k.speed(k.speed() - 1)
                     k.shapesize(k.shapesize()[0] * 1.3, k.shapesize()[1]* 1.3)
                     l.hideturtle()
                     l.penup()
                 else:
-                    l.speed(l.speed() - 2)
+                    l.speed(l.speed() - 1)
                     l.shapesize(l.shapesize()[0]* 1.3, l.shapesize()[1]* 1.3)
                     k.hideturtle()
                     k.penup()
@@ -95,7 +95,7 @@ while True:
                     maTortue.hideturtle()
                     maTortue.penup()
                 else:
-                    maTortue.speed(maTortue.speed() - 2)
+                    maTortue.speed(maTortue.speed() - 1)
                     playerSpeed /= 1.3
                     maTortue.shapesize(maTortue.shapesize()[0]* 1.3, maTortue.shapesize()[1]* 1.3)
                     k.hideturtle()
